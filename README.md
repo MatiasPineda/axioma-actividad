@@ -1,1 +1,1 @@
-# axioma-actividad
+# example-package
