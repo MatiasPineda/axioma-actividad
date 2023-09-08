@@ -8,6 +8,7 @@ class Account(models.Model):
         User,
         on_delete=models.CASCADE,
         verbose_name='Propietario',
+        related_name='accounts',
     )
     number = models.CharField(max_length=20, unique=True)
     accounting_balance = models.BigIntegerField(

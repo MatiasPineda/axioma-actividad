@@ -1,3 +1,48 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from banco.users.models import User
+from banco.accounts.models import Account
 
-# Register your models here.
+
+class AccountInline(admin.StackedInline):
+    """Administración de cuentas `inline`."""
+
+    readonly_fields = (
+        'number',
+        'accounting_balance',
+        'current_balance',
+        'line_of_credit_balance',
+        'total_charges',
+        'total_credits',
+    )
+    model = Account
+    extra = 1
+    max_num = 1
+    can_delete = False
+
+
+@admin.register(User)
+class UserAdmin(BaseUserAdmin):
+    """Administración de Usuarios."""
+
+    inlines = (AccountInline,)
+
+    list_display = (
+        'id',
+        'dni',
+        'names',
+        'surnames',
+    )
+
+    fieldsets = (
+        (None, {'fields': ('dni', 'names', 'surnames', 'password', 'status')}),
+        ('Permisos', {'fields': ('is_active', 'is_superuser'), }),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('dni', 'names', 'surnames', 'password1', 'password2', 'is_active', 'is_superuser'),
+        }),
+    )
+
+    ordering = ('dni',)

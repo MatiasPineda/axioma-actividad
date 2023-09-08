@@ -28,7 +28,6 @@ class UserManager(BaseUserManager):
             password=password,
         )
         user.is_superuser = True
-        user.is_staff = True
         user.save(using=self._db)
         return user
 
@@ -36,14 +35,15 @@ class UserManager(BaseUserManager):
 class User(AbstractUser):
     """Modelo personalizado de usuarios basado en el modelo abstracto de usuarios de Django."""
 
-    dni = models.CharField(unique=True, max_length=10)
-    names = models.CharField(max_length=255)
-    surnames = models.CharField(max_length=255)
-    status = models.BooleanField(default=True)
+    dni = models.CharField('Rut', unique=True, max_length=15)
+    names = models.CharField('Nombres', max_length=255)
+    surnames = models.CharField('Apellidos', max_length=255)
+    status = models.BooleanField(verbose_name='Bloqueado', default=False)
     is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
 
     objects = UserManager()
+
+    username = None
 
     USERNAME_FIELD = 'dni'
     REQUIRED_FIELDS = ['names', 'surnames']
@@ -56,7 +56,7 @@ class User(AbstractUser):
 
     def get_short_name(self):
         return self.names
-    
+
     class Meta:
         verbose_name = 'Usuario'
         verbose_name_plural = 'Usuarios'
