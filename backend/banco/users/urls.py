@@ -1,7 +1,7 @@
 from django.urls import path
 
-from banco.users.views import UserRetriveView
+from banco.users.views import UserRetrieveView
 
 urlpatterns = [
-    path('user/<int:pk>', UserRetriveView.as_view(), name='user'),
+    path('user/', UserRetrieveView.as_view(), name='user'),
 ]
