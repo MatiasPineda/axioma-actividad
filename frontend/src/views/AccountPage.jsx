@@ -26,11 +26,6 @@ function AccountPage() {
         <div>
           <h1>Consultar Cuentas</h1>
         </div>
-        <div>
-          <h2>
-            user
-          </h2>
-        </div>
         <div className="logoutButton" onClick={handleLogout}>
           <h2>
             Salir
@@ -39,11 +34,11 @@ function AccountPage() {
       </div>
       <h2>Cuenta N° {accountData.number} (CLP)</h2>
 
-      <span>Saldos y Movimientos</span>
+      <h3 style={{borderBottom: '2px solid blue', maxWidth: '20%', textAlign: 'center'}}>Saldos y Movimientos</h3>
 
       <div className="infowrapper">
         <div>
-          Saldo al {new Date().toLocaleString()} Hrs.
+          <h2>Saldo al {new Date().toLocaleString()} Hrs.</h2>
         </div>
         <div style={{ height: '2rem' }} />
         <div className='class1' style={{ display: 'flex' }}>
@@ -52,7 +47,8 @@ function AccountPage() {
               Saldo disponible Cuenta Corriente
             </div>
             <div>
-              <span className="moneySign">$</span> {accountData.current_balance}
+              <span className="moneySign">$</span> 
+              <span className="moneyText">{accountData.current_balance}</span>
             </div>
             <div style={{ height: '1rem' }} />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>

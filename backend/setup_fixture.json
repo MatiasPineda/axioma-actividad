@@ -1,0 +1,352 @@
+[
+  {
+    "model": "users.user",
+    "pk": 101,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$wR4nqt9s2uwtXLZk1cuQg3$2c1klNygbKzv9WAWVeSTl23wrktZNzahMja71ZUsgAw=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.348Z",
+      "dni": "8223567",
+      "names": "Juan Carlos",
+      "surnames": "Pérez González",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 102,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$TjnXMQ3DVJ55zI6ZenKA6T$Gu30sxwGs1PmDYi7ZUFVaphvM2/E2eVeKxe6LjtT3U4=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.351Z",
+      "dni": "9124589",
+      "names": "María",
+      "surnames": "López Rodríguez",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 103,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$WoDyNdUhbQ6KZDNjhlZiRn$G2ZAF9ig2c57jB6QJOOe9OBd4SQ8pivrv4hG1pIEnKM=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.351Z",
+      "dni": "10236745",
+      "names": "Luis",
+      "surnames": "Martínez Pérez",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 104,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Vvvox5CvXcX1UEflO5tYIA$rUjI1F0yb3KTmRG4G3dLXMSEeaOrX3rZQMShwJ9dxeI=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.352Z",
+      "dni": "11459876",
+      "names": "Ana María",
+      "surnames": "García Sánchez",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 105,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$8Q2YGOYJwtuEf95eHvbFNm$RQ2j1I6QErfZEmWuDbcAvMiEAxbcWWdM96tOGUrzS/k=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.352Z",
+      "dni": "12569843",
+      "names": "Carlos",
+      "surnames": "Fernández López",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 106,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$CHRZT8AZrOkSObMVd6VizD$QBOcI/0HSJukXFwABYrhcKDLOdKy3y8BOYuJixaW8p4=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.353Z",
+      "dni": "13675421",
+      "names": "Laura",
+      "surnames": "Sánchez Pérez",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 107,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$BX4uv6ChcDP1jHZOhmtqAN$ufBFqx1GcQFX/QBsR5TCdeL6NNRn6u3OEfZbTxJnGR0=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.353Z",
+      "dni": "14782396",
+      "names": "Javier",
+      "surnames": "Ramírez García",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 108,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$so1Sm61nOWJZqbwdSjshon$Iz1lUJfNc4v/iRQjJHTssJJUEbvmdBTeo8xWurkw91s=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.353Z",
+      "dni": "15987432",
+      "names": "Marta",
+      "surnames": "Díaz Rodríguez",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 109,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$HwBWpNnSIinB9dQkcGNHN8$COViuyV7GCeJSgqdClpXyQdRxaqtaH/oSv7wMz85QG8=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:32:48.354Z",
+      "dni": "16123578",
+      "names": "Pedro",
+      "surnames": "López Martínez",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 110,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$mJKnOj93vVi3gSh6Q8MGIg$MMEh/wFUj/y5G/SZGoBV7qsvWKSOqJTiC+oua0lD8dw=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2023-09-09T23:47:42.492Z",
+      "dni": "12345678",
+      "names": "Administrador",
+      "surnames": "de Banco",
+      "is_active": true,
+      "failed_login_attempts": 0,
+      "status": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 1,
+    "fields": {
+      "owner": 101,
+      "number": "123456789012",
+      "accounting_balance": 10500,
+      "current_balance": 9700,
+      "line_of_credit_balance": 5200,
+      "total_charges": 480,
+      "total_credits": 1100
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 2,
+    "fields": {
+      "owner": 102,
+      "number": "234567890123",
+      "accounting_balance": 15500,
+      "current_balance": 14500,
+      "line_of_credit_balance": 3400,
+      "total_charges": 950,
+      "total_credits": 2100
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 3,
+    "fields": {
+      "owner": 103,
+      "number": "345678901234",
+      "accounting_balance": 20500,
+      "current_balance": 18500,
+      "line_of_credit_balance": 2600,
+      "total_charges": 1420,
+      "total_credits": 2980
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 4,
+    "fields": {
+      "owner": 104,
+      "number": "456789012345",
+      "accounting_balance": 25500,
+      "current_balance": 22500,
+      "line_of_credit_balance": 1150,
+      "total_charges": 1850,
+      "total_credits": 3950
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 5,
+    "fields": {
+      "owner": 105,
+      "number": "567890123456",
+      "accounting_balance": 30500,
+      "current_balance": 25500,
+      "line_of_credit_balance": 350,
+      "total_charges": 2400,
+      "total_credits": 5000
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 6,
+    "fields": {
+      "owner": 106,
+      "number": "678901234567",
+      "accounting_balance": 35500,
+      "current_balance": 28500,
+      "line_of_credit_balance": 900,
+      "total_charges": 2950,
+      "total_credits": 6050
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 7,
+    "fields": {
+      "owner": 107,
+      "number": "789012345678",
+      "accounting_balance": 40500,
+      "current_balance": 30500,
+      "line_of_credit_balance": 2000,
+      "total_charges": 3500,
+      "total_credits": 7100
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 8,
+    "fields": {
+      "owner": 108,
+      "number": "890123456789",
+      "accounting_balance": 45500,
+      "current_balance": 33500,
+      "line_of_credit_balance": 3800,
+      "total_charges": 4100,
+      "total_credits": 8200
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 9,
+    "fields": {
+      "owner": 109,
+      "number": "901234567890",
+      "accounting_balance": 50500,
+      "current_balance": 36500,
+      "line_of_credit_balance": 4800,
+      "total_charges": 4700,
+      "total_credits": 9300
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 10,
+    "fields": {
+      "owner": 110,
+      "number": "384746491823",
+      "accounting_balance": 123120123,
+      "current_balance": 124531234,
+      "line_of_credit_balance": 500050,
+      "total_charges": 234123412,
+      "total_credits": 321434124
+    }
+  }
+]
