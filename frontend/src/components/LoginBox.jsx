@@ -17,6 +17,9 @@ function LoginBox() {
         navigate(0)
       })
       .catch((error) => {
+        if (error.response.status === 403) {
+          alert("Su cuenta ha sido bloqueada por múltiples intentos fallidos, por favor comuníquese con soporte")
+        }
         console.log(error.response.data);
       });
   }

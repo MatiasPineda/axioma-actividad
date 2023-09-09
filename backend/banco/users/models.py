@@ -37,8 +37,10 @@ class User(AbstractUser):
     dni = models.CharField('Rut', unique=True, max_length=15)
     names = models.CharField('Nombres', max_length=255)
     surnames = models.CharField('Apellidos', max_length=255)
-    status = models.BooleanField(verbose_name='Bloqueado', default=False)
     is_active = models.BooleanField(default=True)
+
+    failed_login_attempts = models.IntegerField(default=0)
+    status = models.BooleanField(verbose_name='Bloqueado', default=False)
 
     objects = UserManager()
 
@@ -60,3 +62,9 @@ class User(AbstractUser):
         verbose_name = 'Usuario'
         verbose_name_plural = 'Usuarios'
         db_table = 'usuario'
+
+
+    def save(self, *args, **kwargs):
+        if self.is_active and self.failed_login_attempts >= 3 and self.status is False:
+            self.failed_login_attempts = 0
+        super(User, self).save(*args, **kwargs)

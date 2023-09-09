@@ -32,10 +32,12 @@ class UserAdmin(BaseUserAdmin):
         'dni',
         'names',
         'surnames',
+        'status',
     )
 
     fieldsets = (
-        (None, {'fields': ('dni', 'names', 'surnames', 'password', 'status')}),
+        (None, {'fields': ('dni', 'names', 'surnames',
+         'password', 'status', 'failed_login_attempts')}),
         ('Permisos', {'fields': ('is_active', 'is_superuser'), }),
     )
     add_fieldsets = (
@@ -44,5 +46,7 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('dni', 'names', 'surnames', 'password1', 'password2', 'is_active', 'is_superuser'),
         }),
     )
+
+    readonly_fields = ('failed_login_attempts',)
 
     ordering = ('dni',)

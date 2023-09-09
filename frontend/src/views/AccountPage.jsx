@@ -17,7 +17,6 @@ function AccountPage() {
   }
 
   useEffect(() => {
-    console.log('account access!', userData)
     setAccountData(userData?.account?.[0])
   }, []);
 
