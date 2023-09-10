@@ -8,6 +8,7 @@ function LoginBox() {
 
   const [dni, setDni] = useState('')
   const [password, setPassword] = useState('')
+  const [wrongCredentials, setWrongCredentials] = useState(false)
 
 
   const handleLogin = (e) => {
@@ -17,7 +18,10 @@ function LoginBox() {
         navigate(0)
       })
       .catch((error) => {
-        if (error.response.status === 403) {
+        if (error.response.status === 401) {
+          setWrongCredentials(true)
+        }
+        else if (error.response.status === 403) {
           alert("Su cuenta ha sido bloqueada por múltiples intentos fallidos, por favor comuníquese con soporte")
         }
         console.log(error.response.data);
@@ -41,20 +45,15 @@ function LoginBox() {
               placeholder="Rut Usuario"
               maxLength={12}
               required="true"
-              onclick=""
-              onkeyup="limpiarMensajeError('errorRut');pintarCasillaRut();"
-              onblur="formatearRut(this.value);"
+              onclick={()=>setWrongCredentials(false)}
               autofocus="true"
               delete-zero-left=""
               style={{ borderColor: "rgb(210, 210, 212)" }}
               value={dni}
-              onChange={(e) => setDni(e.target.value)}
-            />
-            <small
-              className="invalid"
-              id="errorRut"
-              hidden=""
-              style={{ display: "none" }}
+              onChange={(e) => {
+                wrongCredentials && setWrongCredentials(false)
+                setDni(e.target.value)
+              }}
             />
           </div>
           <div className="form-group pass">
@@ -66,27 +65,14 @@ function LoginBox() {
               placeholder="Clave"
               required="true"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => {
+                wrongCredentials && setWrongCredentials(false)
+                setPassword(e.target.value)
+              }}
             />
-            <i className="ion-ios-locked" />
-            <small className="invalid" id="errorPassword" hidden="" />
-            <small
-              className="invalid"
-              id="capsLock"
-              hidden=""
-              style={{ display: "none" }}
-            >
-              Tecla mayúsculas activada
-            </small>
           </div>
           <div>
             <div className="row">
-              <input name="request_id" type="hidden" defaultValue="" />
-              <input name="ctx" type="hidden" defaultValue="persona" />
-              <div
-                className="captcha-container form-group"
-                style={{ display: "none" }}
-              />
               <button
                 type="button"
                 className="btn success btn-block"
@@ -97,7 +83,7 @@ function LoginBox() {
               </button>
             </div>
           </div>
-          <input type="hidden" name="username" id="iduserName1" />
+          {wrongCredentials && <div className="alert" role="alert" >Credenciales incorrectas</div>}
         </form>
       </article>
     </div>
