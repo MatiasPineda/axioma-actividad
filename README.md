@@ -7,11 +7,57 @@ Instalar las siguientes dependencias con su gestor de preferencia.
 - PDM 2.9.1 (Gestor de paquetes) [Sitio Oficial](https://pdm.fming.dev/2.9/)
 
 ### Frontend
-- Node 18.17.1
+- Node 16.20
 
-## Instalación
 
-Clonar el repositorio de github
+Desde la terminal se puede instalar con los siguientes comandos:
+
+```bash
+# Actualizamos los paquetes e instalamos algunos básicos
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y curl wget git
+
+# Instalamos pyenv, un gestor de versiones de python
+curl https://pyenv.run | bash
+
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+
+source ~/.bashrc
+
+# Instalamos algunas librerías necesarias para el funcionamiento correcto de pyenv
+sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+# Reiniciamos la terminal
+exec $SHELL
+
+# Instalamos python 3.10.12 y lo definimos como global
+
+pyenv install 3.10.12
+pyenv global 3.10.12
+
+# Instalamos pdm, un gestor de paquetes para python
+pip install pdm==2.9.1
+
+
+# Instalamos nvm, un gestor de versiones de node
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+# Volvemos a reiniciar la terminal
+exec $SHELL
+
+# Instalamos node 16
+sudo apt-get remove nodejs
+nvm install 16
+```
+
+## Instalación del proyecto
+
+#### Clonar el repositorio de github
 ```bash
 cd ~/directorio-del-proyecto/
 git clone git@github.com:MatiasPineda/axioma-actividad.git .
@@ -37,6 +83,7 @@ pdm run python3 manage.py runserver
 Para el frontend
 ```bash
 cd ~/directorio-del-proyecto/frontend
+nvm use 16 # Si no se ha definido como global
 npm install
 npm start
 ```
